@@ -3,84 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client App</title>
+    <title>Awesome Client App</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 font-sans">
+<body class="bg-gray-50 text-gray-900 font-sans leading-normal tracking-normal">
 
     <!-- Navigation Bar -->
-    <nav class="bg-blue-600 p-4 shadow-md">
+    <nav class="bg-white p-4 shadow-lg fixed w-full z-10 top-0">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-white text-2xl font-bold">My App</a>
-            <div>
-                <a href="#" class="text-white hover:text-blue-200 mx-2">Home</a>
-                <a href="#" class="text-white hover:text-blue-200 mx-2">About</a>
-                <a href="#" class="text-white hover:text-blue-200 mx-2">Contact</a>
+            <a href="#" class="text-blue-600 text-3xl font-extrabold">🚀 AwesomeApp</a>
+            <div class="space-x-4">
+                <a href="#features" class="text-gray-700 hover:text-blue-500 transition duration-300 ease-in-out">Features</a>
+                <a href="#pricing" class="text-gray-700 hover:text-blue-500 transition duration-300 ease-in-out">Pricing</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-500 transition duration-300 ease-in-out">Contact</a>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transition duration-300 ease-in-out">Sign Up</button>
             </div>
         </div>
     </nav>
 
-    <div class="container mx-auto p-4 mt-8">
-        <h1 class="text-4xl font-extrabold text-gray-800 mb-6 text-center">Hello, Tailwind!</h1>
-
-        <!-- Alert Component -->
-        <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-8" role="alert">
-            <strong class="font-bold">Success!</strong>
-            <span class="block sm:inline">Your operation was completed successfully.</span>
-        </div>
-
-        <!-- Styled Button -->
-        <div class="text-center mb-8">
-            <button class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transition duration-300 ease-in-out">
-                Click Me
+    <!-- Hero Section -->
+    <header class="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
+        <div class="relative z-30 p-5 text-white text-center bg-gray-900 bg-opacity-50 rounded-lg">
+            <h2 class="text-6xl font-extrabold mb-4 animate-fade-in-up">Build Your Dreams with AwesomeApp</h2>
+            <p class="text-xl mb-8 animate-fade-in-up delay-200">The ultimate solution for modern web applications.</p>
+            <button class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-xl transform hover:scale-105 transition duration-300 ease-in-out animate-fade-in-up delay-400">
+                Get Started Today
             </button>
         </div>
+        <video autoplay loop muted class="absolute z-10 w-auto min-w-full min-h-full max-w-none">
+            <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </header>
 
-        <!-- Simple Card Component -->
-        <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl mb-8">
-            <div class="md:flex">
-                <div class="md:flex-shrink-0">
-                    <img class="h-48 w-full object-cover md:w-48" src="https://via.placeholder.com/150" alt="Placeholder image">
+    <main class="container mx-auto px-4 py-8 mt-12">
+        <!-- Features Section -->
+        <section id="features" class="mb-16 text-center">
+            <h2 class="text-5xl font-extrabold mb-10 text-gray-800">Powerful Features for You</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-white p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+                    <i class="fas fa-rocket text-blue-500 text-5xl mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-3">Blazing Fast</h3>
+                    <p class="text-gray-600">Experience unparalleled speed and performance for your applications.</p>
                 </div>
-                <div class="p-8">
-                    <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Marketing</div>
-                    <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Tailwind CSS Card</a>
-                    <p class="mt-2 text-gray-500">This is a beautiful example of a responsive card component built with Tailwind CSS utility classes.</p>
+                <div class="bg-white p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+                    <i class="fas fa-cogs text-green-500 text-5xl mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-3">Easy Customization</h3>
+                    <p class="text-gray-600">Tailor every aspect of your app with intuitive and flexible options.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+                    <i class="fas fa-shield-alt text-red-500 text-5xl mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-3">Secure & Reliable</h3>
+                    <p class="text-gray-600">Your data and applications are always safe with our robust security.</p>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Form Input Group -->
-        <div class="max-w-md mx-auto mb-8">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
-                Username
-            </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username">
-        </div>
+        <!-- Pricing Section -->
+        <section id="pricing" class="mb-16 text-center bg-blue-700 text-white p-12 rounded-lg shadow-2xl">
+            <h2 class="text-5xl font-extrabold mb-10">Affordable Plans for Everyone</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div class="bg-white text-gray-800 p-8 rounded-lg shadow-lg flex flex-col justify-between transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-4">Basic</h3>
+                        <p class="text-5xl font-extrabold mb-6">$9<span class="text-xl font-normal">/month</span></p>
+                        <ul class="text-lg mb-8 space-y-3">
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> 10 Users</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> 5GB Storage</li>
+                            <li><i class="fas fa-times-circle text-red-500 mr-2"></i> Priority Support</li>
+                        </ul>
+                    </div>
+                    <button class="mt-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full">Choose Plan</button>
+                </div>
+                <!-- Pro Plan -->
+                <div class="bg-blue-800 text-white p-8 rounded-lg shadow-lg flex flex-col justify-between transform hover:scale-105 transition duration-300 ease-in-out border-4 border-yellow-400">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-4">Pro</h3>
+                        <p class="text-5xl font-extrabold mb-6">$29<span class="text-xl font-normal">/month</span></p>
+                        <ul class="text-lg mb-8 space-y-3">
+                            <li><i class="fas fa-check-circle text-yellow-400 mr-2"></i> 50 Users</li>
+                            <li><i class="fas fa-check-circle text-yellow-400 mr-2"></i> 50GB Storage</li>
+                            <li><i class="fas fa-check-circle text-yellow-400 mr-2"></i> Priority Support</li>
+                        </ul>
+                    </div>
+                    <button class="mt-auto bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold py-3 px-6 rounded-full">Choose Plan</button>
+                </div>
+                <!-- Enterprise Plan -->
+                <div class="bg-white text-gray-800 p-8 rounded-lg shadow-lg flex flex-col justify-between transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-4">Enterprise</h3>
+                        <p class="text-5xl font-extrabold mb-6">$99<span class="text-xl font-normal">/month</span></p>
+                        <ul class="text-lg mb-8 space-y-3">
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Unlimited Users</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Unlimited Storage</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> 24/7 Support</li>
+                        </ul>
+                    </div>
+                    <button class="mt-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full">Choose Plan</button>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        <!-- Responsive Grid Layout -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-semibold mb-2">Grid Item 1</h3>
-                <p class="text-gray-600">This is a responsive grid item.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-semibold mb-2">Grid Item 2</h3>
-                <p class="text-gray-600">Another item, showing responsiveness.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-semibold mb-2">Grid Item 3</h3>
-                <p class="text-gray-600">And a third item in the grid.</p>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-8 text-center">
+        <div class="container mx-auto">
+            <p>&copy; 2023 AwesomeApp. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
-
-        <!-- Another Styled Button -->
-        <div class="text-center">
-            <button class="bg-green-500 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
-                Learn More
-            </button>
-        </div>
-    </div>
+    </footer>
 
     <script src="dist/main.js"></script>
 </body>
