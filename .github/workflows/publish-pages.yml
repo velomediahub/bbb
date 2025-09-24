@@ -21,11 +21,21 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Get workflow run ID
+        id: get_run_id
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const runId = github.event.workflow_run.id;
+            console.log(`Triggering Workflow Run ID: ${runId}`);
+            core.setOutput('run_id', runId);
+
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
           name: dist-files
           path: ./dist
+          run-id: ${{ steps.get_run_id.outputs.run_id }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
