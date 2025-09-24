@@ -1,4 +1,4 @@
-name: Client-side Preprocessing
+name: Client-side Preprocessing and Deploy
 
 on:
   push:
@@ -9,8 +9,15 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # To push build artifacts
+      pages: write    # To deploy to GitHub Pages
+      id-token: write # Required for actions/deploy-pages
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
     - name: Checkout repository
@@ -27,8 +34,14 @@ jobs:
     - name: Run client-side build
       run: npm run build
 
-    - name: Upload production-ready assets
-      uses: actions/upload-artifact@v4
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
       with:
-        name: dist-files
-        path: dist
+        path: './dist' # Path to your build output directory
+
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
