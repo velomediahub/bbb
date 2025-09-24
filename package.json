@@ -1,0 +1,10 @@
+{
+  "name": "client-app",
+  "version": "1.0.0",
+  "description": "A client-side web application.",
+  "scripts": {
+    "build": "echo 'Running client-side preprocessing...'"
+  },
+  "devDependencies": {
+  }
+}
