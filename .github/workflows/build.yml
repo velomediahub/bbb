@@ -27,10 +27,8 @@ jobs:
     - name: Run client-side build
       run: npm run build
 
-    # You might add steps here to upload build artifacts, 
-    # e.g., using actions/upload-artifact@v4
-    # - name: Upload production-ready assets
-    #   uses: actions/upload-artifact@v4
-    #   with:
-    #     name: dist-files
-    #     path: dist
+    - name: Upload production-ready assets
+      uses: actions/upload-artifact@v4
+      with:
+        name: dist-files
+        path: dist
