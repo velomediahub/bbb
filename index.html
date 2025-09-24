@@ -3,119 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome Client App</title>
+    <title>Next-Level Awesome App</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom animation for subtle fade-in-up effect */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.7s ease-out forwards;
+            opacity: 0; /* Start hidden */
+        }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-600 { animation-delay: 0.6s; }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans leading-normal tracking-normal">
+<body class="bg-gray-100 text-gray-900 font-sans antialiased">
 
     <!-- Navigation Bar -->
-    <nav class="bg-white p-4 shadow-lg fixed w-full z-10 top-0">
+    <nav class="bg-white p-4 shadow-xl fixed w-full z-20 top-0">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-blue-600 text-3xl font-extrabold">🚀 AwesomeApp</a>
-            <div class="space-x-4">
-                <a href="#features" class="text-gray-700 hover:text-blue-500 transition duration-300 ease-in-out">Features</a>
-                <a href="#pricing" class="text-gray-700 hover:text-blue-500 transition duration-300 ease-in-out">Pricing</a>
-                <a href="#contact" class="text-gray-700 hover:text-blue-500 transition duration-300 ease-in-out">Contact</a>
-                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transition duration-300 ease-in-out">Sign Up</button>
+            <a href="#" class="text-teal-600 text-3xl font-extrabold transition duration-300 ease-in-out hover:text-teal-800">🌟 AwesomeApp</a>
+            <div class="space-x-6 hidden md:flex">
+                <a href="#features" class="text-gray-700 hover:text-teal-600 font-medium transition duration-300 ease-in-out">Features</a>
+                <a href="#pricing" class="text-gray-700 hover:text-teal-600 font-medium transition duration-300 ease-in-out">Pricing</a>
+                <a href="#contact" class="text-gray-700 hover:text-teal-600 font-medium transition duration-300 ease-in-out">Contact</a>
+                <button class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-5 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1">Sign Up</button>
             </div>
+            <!-- Mobile menu button -->
+            <button class="md:hidden text-gray-700 hover:text-teal-600 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
-        <div class="relative z-30 p-5 text-white text-center bg-gray-900 bg-opacity-50 rounded-lg">
-            <h2 class="text-6xl font-extrabold mb-4 animate-fade-in-up">Build Your Dreams with AwesomeApp</h2>
-            <p class="text-xl mb-8 animate-fade-in-up delay-200">The ultimate solution for modern web applications.</p>
-            <button class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-xl transform hover:scale-105 transition duration-300 ease-in-out animate-fade-in-up delay-400">
-                Get Started Today
+    <header class="relative flex items-center justify-center h-screen overflow-hidden">
+        <div class="relative z-10 p-8 md:p-12 text-white text-center bg-gray-900 bg-opacity-60 rounded-xl max-w-4xl mx-auto shadow-2xl">
+            <h2 class="text-5xl md:text-7xl font-extrabold mb-4 animate-fade-in-up drop-shadow-lg">Unleash Your Creative Potential</h2>
+            <p class="text-lg md:text-2xl mb-8 animate-fade-in-up delay-200 drop-shadow-md">The ultimate platform for building, designing, and deploying cutting-edge web experiences.</p>
+            <button class="bg-amber-400 hover:bg-amber-500 text-gray-900 font-bold py-3 md:py-4 px-6 md:px-8 rounded-full text-lg shadow-xl transform hover:scale-105 transition duration-300 ease-in-out animate-fade-in-up delay-400">
+                Start Your Journey Now
             </button>
         </div>
-        <video autoplay loop muted class="absolute z-10 w-auto min-w-full min-h-full max-w-none">
+        <video autoplay loop muted playsinline class="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover opacity-90">
             <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4" />
             Your browser does not support the video tag.
         </video>
     </header>
 
-    <main class="container mx-auto px-4 py-8 mt-12">
+    <main class="container mx-auto px-4 py-16">
         <!-- Features Section -->
-        <section id="features" class="mb-16 text-center">
-            <h2 class="text-5xl font-extrabold mb-10 text-gray-800">Powerful Features for You</h2>
+        <section id="features" class="mb-20 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-gray-800">Ignite Your Workflow with Powerful Features</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div class="bg-white p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
-                    <i class="fas fa-rocket text-blue-500 text-5xl mb-4"></i>
-                    <h3 class="text-2xl font-bold mb-3">Blazing Fast</h3>
-                    <p class="text-gray-600">Experience unparalleled speed and performance for your applications.</p>
+                <div class="bg-white p-10 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 group">
+                    <i class="fas fa-tachometer-alt text-teal-500 text-6xl mb-6 group-hover:text-teal-600 transition duration-300"></i>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Blazing Fast Performance</h3>
+                    <p class="text-gray-600">Experience unparalleled speed and responsiveness, optimized for the modern web.</p>
                 </div>
-                <div class="bg-white p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
-                    <i class="fas fa-cogs text-green-500 text-5xl mb-4"></i>
-                    <h3 class="text-2xl font-bold mb-3">Easy Customization</h3>
-                    <p class="text-gray-600">Tailor every aspect of your app with intuitive and flexible options.</p>
+                <div class="bg-white p-10 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 group">
+                    <i class="fas fa-puzzle-piece text-amber-500 text-6xl mb-6 group-hover:text-amber-600 transition duration-300"></i>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Seamless Integration</h3>
+                    <p class="text-gray-600">Connect effortlessly with your favorite tools and services.</p>
                 </div>
-                <div class="bg-white p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
-                    <i class="fas fa-shield-alt text-red-500 text-5xl mb-4"></i>
-                    <h3 class="text-2xl font-bold mb-3">Secure & Reliable</h3>
-                    <p class="text-gray-600">Your data and applications are always safe with our robust security.</p>
+                <div class="bg-white p-10 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2 group">
+                    <i class="fas fa-lock text-emerald-500 text-6xl mb-6 group-hover:text-emerald-600 transition duration-300"></i>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Enterprise-Grade Security</h3>
+                    <p class="text-gray-600">Your data is protected with state-of-the-art encryption and protocols.</p>
                 </div>
             </div>
         </section>
 
         <!-- Pricing Section -->
-        <section id="pricing" class="mb-16 text-center bg-blue-700 text-white p-12 rounded-lg shadow-2xl">
-            <h2 class="text-5xl font-extrabold mb-10">Affordable Plans for Everyone</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <section id="pricing" class="mb-20 text-center bg-teal-700 text-white p-16 rounded-xl shadow-2xl">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-12">Simple, Transparent Pricing</h2>
+            <p class="text-xl mb-16 max-w-2xl mx-auto opacity-90">Choose a plan that scales with your ambition, with no hidden fees or surprises.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <!-- Basic Plan -->
-                <div class="bg-white text-gray-800 p-8 rounded-lg shadow-lg flex flex-col justify-between transform hover:scale-105 transition duration-300 ease-in-out">
+                <div class="bg-white text-gray-800 p-10 rounded-xl shadow-lg flex flex-col justify-between transform hover:scale-105 transition duration-300 ease-in-out border-b-4 border-teal-500 hover:border-teal-700">
                     <div>
-                        <h3 class="text-3xl font-bold mb-4">Basic</h3>
-                        <p class="text-5xl font-extrabold mb-6">$9<span class="text-xl font-normal">/month</span></p>
-                        <ul class="text-lg mb-8 space-y-3">
-                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> 10 Users</li>
-                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> 5GB Storage</li>
-                            <li><i class="fas fa-times-circle text-red-500 mr-2"></i> Priority Support</li>
+                        <h3 class="text-3xl font-bold mb-4 text-gray-900">Starter</h3>
+                        <p class="text-5xl font-extrabold mb-6 text-teal-600">$19<span class="text-xl font-normal text-gray-500">/month</span></p>
+                        <ul class="text-lg mb-8 space-y-4 text-left mx-auto max-w-xs">
+                            <li><i class="fas fa-check-circle text-teal-500 mr-3"></i> 1 Project</li>
+                            <li><i class="fas fa-check-circle text-teal-500 mr-3"></i> 5GB Storage</li>
+                            <li><i class="fas fa-times-circle text-red-500 mr-3"></i> Email Support</li>
                         </ul>
                     </div>
-                    <button class="mt-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full">Choose Plan</button>
+                    <button class="mt-auto bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-6 rounded-full shadow-md">Select Plan</button>
                 </div>
                 <!-- Pro Plan -->
-                <div class="bg-blue-800 text-white p-8 rounded-lg shadow-lg flex flex-col justify-between transform hover:scale-105 transition duration-300 ease-in-out border-4 border-yellow-400">
+                <div class="bg-teal-800 text-white p-10 rounded-xl shadow-lg flex flex-col justify-between transform hover:scale-105 transition duration-300 ease-in-out border-b-4 border-amber-400 hover:border-amber-500">
                     <div>
-                        <h3 class="text-3xl font-bold mb-4">Pro</h3>
-                        <p class="text-5xl font-extrabold mb-6">$29<span class="text-xl font-normal">/month</span></p>
-                        <ul class="text-lg mb-8 space-y-3">
-                            <li><i class="fas fa-check-circle text-yellow-400 mr-2"></i> 50 Users</li>
-                            <li><i class="fas fa-check-circle text-yellow-400 mr-2"></i> 50GB Storage</li>
-                            <li><i class="fas fa-check-circle text-yellow-400 mr-2"></i> Priority Support</li>
+                        <h3 class="text-3xl font-bold mb-4 text-white">Pro</h3>
+                        <p class="text-5xl font-extrabold mb-6 text-amber-400">$49<span class="text-xl font-normal text-gray-200">/month</span></p>
+                        <ul class="text-lg mb-8 space-y-4 text-left mx-auto max-w-xs">
+                            <li><i class="fas fa-check-circle text-amber-400 mr-3"></i> 10 Projects</li>
+                            <li><i class="fas fa-check-circle text-amber-400 mr-3"></i> 50GB Storage</li>
+                            <li><i class="fas fa-check-circle text-amber-400 mr-3"></i> Priority Support</li>
                         </ul>
                     </div>
-                    <button class="mt-auto bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold py-3 px-6 rounded-full">Choose Plan</button>
+                    <button class="mt-auto bg-amber-400 hover:bg-amber-500 text-teal-900 font-bold py-3 px-6 rounded-full shadow-md">Select Plan</button>
                 </div>
                 <!-- Enterprise Plan -->
-                <div class="bg-white text-gray-800 p-8 rounded-lg shadow-lg flex flex-col justify-between transform hover:scale-105 transition duration-300 ease-in-out">
+                <div class="bg-white text-gray-800 p-10 rounded-xl shadow-lg flex flex-col justify-between transform hover:scale-105 transition duration-300 ease-in-out border-b-4 border-teal-500 hover:border-teal-700">
                     <div>
-                        <h3 class="text-3xl font-bold mb-4">Enterprise</h3>
-                        <p class="text-5xl font-extrabold mb-6">$99<span class="text-xl font-normal">/month</span></p>
-                        <ul class="text-lg mb-8 space-y-3">
-                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Unlimited Users</li>
-                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Unlimited Storage</li>
-                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> 24/7 Support</li>
+                        <h3 class="text-3xl font-bold mb-4 text-gray-900">Enterprise</h3>
+                        <p class="text-5xl font-extrabold mb-6 text-teal-600">$149<span class="text-xl font-normal text-gray-500">/month</span></p>
+                        <ul class="text-lg mb-8 space-y-4 text-left mx-auto max-w-xs">
+                            <li><i class="fas fa-check-circle text-teal-500 mr-3"></i> Unlimited Projects</li>
+                            <li><i class="fas fa-check-circle text-teal-500 mr-3"></i> Unlimited Storage</li>
+                            <li><i class="fas fa-check-circle text-teal-500 mr-3"></i> Dedicated Support</li>
                         </ul>
                     </div>
-                    <button class="mt-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full">Choose Plan</button>
+                    <button class="mt-auto bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-6 rounded-full shadow-md">Select Plan</button>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white p-8 text-center">
+    <footer id="contact" class="bg-gray-900 text-gray-300 p-10 text-center shadow-inner">
         <div class="container mx-auto">
-            <p>&copy; 2023 AwesomeApp. All rights reserved.</p>
-            <div class="mt-4 space-x-4">
-                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+            <p class="mb-4">&copy; 2023 AwesomeApp. All rights reserved.</p>
+            <div class="mt-4 space-x-6 text-2xl">
+                <a href="#" class="text-gray-400 hover:text-teal-400 transition duration-300"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-teal-400 transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gray-400 hover:text-teal-400 transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-gray-400 hover:text-teal-400 transition duration-300"><i class="fab fa-github"></i></a>
             </div>
+            <p class="mt-6 text-sm">Built with passion and Tailwind CSS.</p>
         </div>
     </footer>
 
