@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Modern & Minimalist App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        body { animation: fadeIn 1s ease-in-out; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white/80 backdrop-blur-md p-4 fixed w-full z-20 top-0 border-b border-slate-200">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-slate-900 text-2xl font-bold transition duration-300 ease-in-out hover:text-indigo-600">M.</a>
+            <div class="space-x-8 hidden md:flex">
+                <a href="features.html" class="text-slate-600 hover:text-indigo-600 font-medium transition duration-300 ease-in-out">Features</a>
+                <a href="pricing.html" class="text-slate-600 hover:text-indigo-600 font-medium transition duration-300 ease-in-out">Pricing</a>
+                <a href="about.html" class="text-slate-600 hover:text-indigo-600 font-medium transition duration-300 ease-in-out">About</a>
+                <a href="blog.html" class="text-slate-600 hover:text-indigo-600 font-medium transition duration-300 ease-in-out">Blog</a>
+                <a href="contact.html" class="text-slate-600 hover:text-indigo-600 font-medium transition duration-300 ease-in-out">Contact</a>
+            </div>
+            <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-5 rounded-md shadow-sm transition duration-300 ease-in-out transform hover:-translate-y-px">
+                Get Started
+            </button>
+        </div>
+    </nav>
+
+    <main class="pt-24 py-16">
+        <section class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-6 text-slate-900">About Our Vision</h1>
+            <p class="text-lg md:text-xl mb-8 text-slate-600 max-w-3xl mx-auto">
+                We believe in crafting elegant solutions that empower individuals and businesses. Our journey began with a simple idea: to make powerful tools accessible and a joy to use.
+            </p>
+            <div class="bg-white p-8 rounded-lg border border-slate-200 max-w-4xl mx-auto text-left">
+                <h2 class="text-2xl font-bold mb-4 text-slate-900">Our Mission</h2>
+                <p class="text-slate-700 mb-4">
+                    To deliver intuitive, high-performance web applications that enhance productivity and inspire creativity. We are committed to continuous innovation and user-centric design.
+                </p>
+                <h2 class="text-2xl font-bold mb-4 text-slate-900">Our Values</h2>
+                <ul class="list-disc list-inside text-slate-700 space-y-2">
+                    <li>Innovation: Always seeking better ways to solve problems.</li>
+                    <li>Simplicity: Design that focuses on clarity and ease of use.</li>
+                    <li>Integrity: Building trust through transparent practices.</li>
+                    <li>Excellence: Delivering robust and reliable solutions.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-50 py-10 border-t border-slate-200">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-4 text-xl">
+                <a href="#" class="text-slate-500 hover:text-indigo-600 mx-3 transition duration-300"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-slate-500 hover:text-indigo-600 mx-3 transition duration-300"><i class="fab fa-github"></i></a>
+                <a href="#" class="text-slate-500 hover:text-indigo-600 mx-3 transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="text-slate-500 text-sm">&copy; 2023 M. All rights reserved. <a href="privacy.html" class="hover:underline">Privacy Policy</a> | <a href="terms.html" class="hover:underline">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="dist/main.js"></script>
+</body>
+</html>

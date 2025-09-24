@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A client-side web application.",
   "scripts": {
-    "build": "mkdir -p dist && npx postcss src/input.css -o dist/style.css && cp index.html dist/index.html"
+    "build": "mkdir -p dist && npx postcss src/input.css -o dist/style.css && cp index.html about.html contact.html blog.html privacy.html terms.html dist/"
   },
   "devDependencies": {
     "tailwindcss": "3.3.3",
