@@ -6,8 +6,52 @@
     <title>Client App</title>
     <link rel="stylesheet" href="dist/style.css">
 </head>
-<body>
-    <h1 class="text-3xl font-bold underline">Hello, Tailwind!</h1>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-600 p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-white text-2xl font-bold">My App</a>
+            <div>
+                <a href="#" class="text-white hover:text-blue-200 mx-2">Home</a>
+                <a href="#" class="text-white hover:text-blue-200 mx-2">About</a>
+                <a href="#" class="text-white hover:text-blue-200 mx-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto p-4 mt-8">
+        <h1 class="text-4xl font-extrabold text-gray-800 mb-6 text-center">Hello, Tailwind!</h1>
+
+        <!-- Styled Button -->
+        <div class="text-center mb-8">
+            <button class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transition duration-300 ease-in-out">
+                Click Me
+            </button>
+        </div>
+
+        <!-- Simple Card Component -->
+        <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl mb-8">
+            <div class="md:flex">
+                <div class="md:flex-shrink-0">
+                    <img class="h-48 w-full object-cover md:w-48" src="https://via.placeholder.com/150" alt="Placeholder image">
+                </div>
+                <div class="p-8">
+                    <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Marketing</div>
+                    <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Tailwind CSS Card</a>
+                    <p class="mt-2 text-gray-500">This is a beautiful example of a responsive card component built with Tailwind CSS utility classes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Another Styled Button -->
+        <div class="text-center">
+            <button class="bg-green-500 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
+                Learn More
+            </button>
+        </div>
+    </div>
+
     <script src="dist/main.js"></script>
 </body>
 </html>
